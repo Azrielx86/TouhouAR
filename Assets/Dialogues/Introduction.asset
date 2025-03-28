@@ -15,13 +15,13 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
     text: "\"\u2026Algo est\xE1 raro hoy.\""
-  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+  - character: {fileID: 11400000, guid: 1105d1bca174b4e45a037c21bccf64cc, type: 2}
     text: "Reimu mira a su alrededor, notando que el ofuda que dej\xF3 en la entrada
       ayer ahora est\xE1 en el suelo, como si el tiempo hubiera retrocedido."
   - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
     text: "\"\xBFOtra vez alg\xFAn desastre absurdo en Gensokyo? Ni siquiera he tomado
       mi t\xE9 de la ma\xF1ana\u2026\""
-  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+  - character: {fileID: 11400000, guid: 1105d1bca174b4e45a037c21bccf64cc, type: 2}
     text: "Reimu ve un objeto extra\xF1o en el suelo. No lo recuerda, pero siente
       que pertenece a este lugar."
   - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}

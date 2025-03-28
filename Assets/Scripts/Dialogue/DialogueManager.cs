@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Dialogue
 {
@@ -13,8 +15,11 @@ namespace Dialogue
 
         public TextMeshProUGUI nameText;
         public TextMeshProUGUI dialogueText;
+        public Image spriteRenderer;
 
         public Animator animator;
+
+        public GameObject player;
 
         private Queue<DialogueLine> _sentences;
 
@@ -25,7 +30,8 @@ namespace Dialogue
 
         public void StartDialogue(Dialogue dialogue)
         {
-            Debug.Log("Starting conversation.");
+            player.GetComponent<Player>().CanMove(false);
+            
             animator.SetBool(IsOpen, true);
 
             _sentences.Clear();
@@ -49,13 +55,14 @@ namespace Dialogue
 
             dialogueText.text = sentence.text;
             nameText.text = sentence.character.charactrerName;
+            spriteRenderer.sprite = sentence.character.sprite;
 
             Debug.Log(sentence.character.charactrerName + ": " + sentence.text);
         }
 
         public void EndDialogue()
         {
-            Debug.Log("End of conversation.");
+            player.GetComponent<Player>().CanMove(true);
             animator.SetBool(IsOpen, false);
         }
     }

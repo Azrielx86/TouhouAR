@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e06d175eedbe19a42a6bfa3b5b7920c9, type: 3}
-  m_Name: Narrator
+  m_Name: PhantomOne
   m_EditorClassIdentifier: 
-  charactrerName: ...
-  sprite: {fileID: 21300000, guid: 44f5763023bff4d3dbfb13b858cff6ce, type: 3}
+  charactrerName: Fantasma 1
+  sprite: {fileID: 0}

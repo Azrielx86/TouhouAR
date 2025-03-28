@@ -14,14 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
-    text: "(De repente, un grupo de hadas aparece de entre los \xE1rboles, riendo
+    text: "(De repente, un grupo de fantasmas aparece de entre los \xE1rboles, riendo
       y flotando alrededor de ella.)"
-  - character: {fileID: 11400000, guid: 1e018e317009aec449cb4e4e7f40b693, type: 2}
+  - character: {fileID: 11400000, guid: 72c7138f99aec98488da089b26ec22b4, type: 2}
     text: "\"\xA1Hola, Reimu! \xA1Nos perdimos en la niebla! \xA1Te vamos a dar una
       bienvenida especial!\""
-  - character: {fileID: 11400000, guid: 1e018e317009aec449cb4e4e7f40b693, type: 2}
-    text: "\"\xA1S\xED! \xA1Una bienvenida de lo m\xE1s\u2026 explosiva!\""
-  - character: {fileID: 11400000, guid: 1e018e317009aec449cb4e4e7f40b693, type: 2}
+  - character: {fileID: 11400000, guid: 316e1477df80b5a41a503ddb3186be47, type: 2}
     text: "\"\xA1S\xED! \xA1Una bienvenida de lo m\xE1s\u2026 explosiva!\""
   - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
     text: "\"\xBFQu\xE9? \xBF\xA1Est\xE1n fuera de control!?\""

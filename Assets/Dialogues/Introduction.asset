@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a5efc0d225e4449b6ac73273ebfa12, type: 3}
+  m_Name: Introduction
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"\u2026Algo est\xE1 raro hoy.\""
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "Reimu mira a su alrededor, notando que el ofuda que dej\xF3 en la entrada
+      ayer ahora est\xE1 en el suelo, como si el tiempo hubiera retrocedido."
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"\xBFOtra vez alg\xFAn desastre absurdo en Gensokyo? Ni siquiera he tomado
+      mi t\xE9 de la ma\xF1ana\u2026\""
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "Reimu ve un objeto extra\xF1o en el suelo. No lo recuerda, pero siente
+      que pertenece a este lugar."
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"\xBFY esto? No lo recuerdo\u2026 pero tampoco parece fuera de lugar.
+      Ugh, definitivamente algo anda mal.\""
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"Supongo que alguien tiene que arreglarlo\u2026 y como siempre, esa soy
+      yo.\""

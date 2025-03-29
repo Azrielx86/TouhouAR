@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06d175eedbe19a42a6bfa3b5b7920c9, type: 3}
   m_Name: Reimu
   m_EditorClassIdentifier: 
-  name: Reimu
-  sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  charactrerName: Reimu
+  sprite: {fileID: 21300000, guid: 5a0cf6a71dde849459b0a4f583d75f64, type: 3}

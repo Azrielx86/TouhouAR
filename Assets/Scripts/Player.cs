@@ -6,17 +6,7 @@ public class Player : MonoBehaviour
 {
     private static readonly int IsRunning = Animator.StringToHash("IsRunning");
 
-    [Header("Stats")]
-    public float health = 100;
-
-    public float defense = 0;
-    public float attack = 10;
-
-    [Header("Max stats")]
-    public float maxHealth = 100;
-
-    public float maxDefense = 100;
-    public float maxAttack = 100;
+    private Entity _entity;
 
     [Header("Player objects")]
     public GameObject model;

@@ -1,26 +1,33 @@
 using Dialogue;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PathTrigger : MonoBehaviour
 {
-    public Dialogue.Dialogue dialogue;
-        
+    [FormerlySerializedAs("dialogue")]
+    public Dialogue.Dialogue startDialogue;
+
+    public Dialogue.Dialogue endDialogue;
+
     private void OnTriggerEnter(Collider other)
     {
-        // if (!other.CompareTag("Player")) return;
-        
         if (other.gameObject.GetComponentInChildren<Player>() is null) return;
-        
+
         Debug.Log("Player collided with the trigger.");
-        
-        GetComponentInChildren<MobControl>().OnEventTriggered();
-        
+
         var dialogueManager = FindFirstObjectByType<DialogueManager>();
         if (dialogueManager != null)
         {
-            if (dialogue != null)
+            if (startDialogue != null)
             {
-                dialogueManager.StartDialogue(dialogue);
+                dialogueManager.StartDialogue(startDialogue);
+                dialogueManager.OnDialogueEnd += () =>
+                {
+                    FindFirstObjectByType<BattleSystem>()
+                        .SetupBattle(other.gameObject, GetComponentInChildren<Enemy>().gameObject)
+                        .SetupDialogues(endDialogue);
+                    Debug.Log("Dialogue ended, callback called.");
+                };
             }
             else
             {

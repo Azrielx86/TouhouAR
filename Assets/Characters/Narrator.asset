@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Narrator
   m_EditorClassIdentifier: 
   charactrerName: ...
-  sprite: {fileID: 21300000, guid: 44f5763023bff4d3dbfb13b858cff6ce, type: 3}
+  sprite: {fileID: 0}

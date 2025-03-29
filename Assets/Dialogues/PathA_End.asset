@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
-    text: "\"Esto es rid\xEDculo\u2026 \xBFPor qu\xE9 ahora hasta las hadas se vuelven
-      locas? Algo m\xE1s grande est\xE1 sucediendo aqu\xED.\""
+    text: "\"Esto es rid\xEDculo\u2026 \xBFPor qu\xE9 ahora hasta los fantasmas se
+      vuelven locas? Algo m\xE1s grande est\xE1 sucediendo aqu\xED.\""
   - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
     text: "Reimu revisa el suelo y encuentra un \xEDtem: una Spellcard. La toma y
       observa."

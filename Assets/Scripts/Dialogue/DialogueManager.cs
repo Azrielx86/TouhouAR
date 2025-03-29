@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ namespace Dialogue
     /// </summary>
     public class DialogueManager : MonoBehaviour
     {
+        public delegate void DialogueEndCallback();
         private static readonly int IsOpen = Animator.StringToHash("IsOpen");
 
         public TextMeshProUGUI nameText;
@@ -22,6 +24,8 @@ namespace Dialogue
         public GameObject player;
 
         private Queue<DialogueLine> _sentences;
+
+        public event DialogueEndCallback OnDialogueEnd;
 
         private void Start()
         {
@@ -38,8 +42,7 @@ namespace Dialogue
 
             foreach (var line in dialogue.lines)
                 _sentences.Enqueue(line);
-
-
+            
             DisplayNextSentence();
         }
 
@@ -63,6 +66,8 @@ namespace Dialogue
         public void EndDialogue()
         {
             player.GetComponent<Player>().CanMove(true);
+            OnDialogueEnd?.Invoke();
+            OnDialogueEnd = null;
             animator.SetBool(IsOpen, false);
         }
     }

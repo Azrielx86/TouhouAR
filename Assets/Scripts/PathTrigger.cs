@@ -9,6 +9,8 @@ public class PathTrigger : MonoBehaviour
 
     public Dialogue.Dialogue endDialogue;
 
+    public Scenario scenario;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponentInChildren<Player>() is null) return;

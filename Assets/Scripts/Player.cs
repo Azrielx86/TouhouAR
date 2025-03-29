@@ -1,5 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Vuforia;
 
 public class Player : MonoBehaviour
@@ -18,6 +21,11 @@ public class Player : MonoBehaviour
 
     private bool _isMoving = false;
     private bool _canMove;
+
+    [SerializeField]
+    private List<Scenario> scenarios = new() { Scenario.PathA, Scenario.PathB };
+
+    public void UnlockScenario(Scenario scenario) => scenarios.Add(scenario);
 
     public void CanMove(bool canMove)
     {
@@ -38,7 +46,7 @@ public class Player : MonoBehaviour
         animator.SetBool(IsRunning, true);
         _isMoving = true;
 
-        if (target is null)
+        if (target is null || !scenarios.Contains(target.GetComponent<PathTrigger>().scenario))
         {
             animator.SetBool(IsRunning, false);
             _isMoving = false;
@@ -58,7 +66,9 @@ public class Player : MonoBehaviour
             yield return null;
         }
 
+        var parent = transform.parent;
         transform.parent = target.transform;
+        Destroy(parent.gameObject);
         animator.SetBool(IsRunning, false);
         _isMoving = false;
     }

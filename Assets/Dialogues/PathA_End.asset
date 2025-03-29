@@ -16,11 +16,11 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
     text: "\"Esto es rid\xEDculo\u2026 \xBFPor qu\xE9 ahora hasta los fantasmas se
       vuelven locas? Algo m\xE1s grande est\xE1 sucediendo aqu\xED.\""
-  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+  - character: {fileID: 11400000, guid: 1105d1bca174b4e45a037c21bccf64cc, type: 2}
     text: "Reimu revisa el suelo y encuentra un \xEDtem: una Spellcard. La toma y
       observa."
   - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
     text: "\"Una nueva carta de hechizo\u2026 parece que este problema est\xE1 afectando
       a todo Gensokyo. Debo seguir adelante.\""
-  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
-    text: "\"Mmm\u2026 No est\xE1 mal. Mejor tener todo a la mano.\""
+  - character: {fileID: 11400000, guid: 1105d1bca174b4e45a037c21bccf64cc, type: 2}
+    text: Reimu sigue su camino...

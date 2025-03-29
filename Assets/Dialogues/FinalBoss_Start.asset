@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a5efc0d225e4449b6ac73273ebfa12, type: 3}
+  m_Name: FinalBoss_Start
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: a3037e22198133d409aba5331d9844a6, type: 2}
+    text: "\"Ah\u2026 As\xED que lograste llegar hasta aqu\xED. Sab\xEDa que lo har\xEDas,
+      Reimu.\""
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"Esto se siente a\xFAn m\xE1s raro que el incidente de la Luna. \xBFQu\xE9
+      demonios est\xE1s haciendo, Yukari?\""
+  - character: {fileID: 11400000, guid: a3037e22198133d409aba5331d9844a6, type: 2}
+    text: "\"Hmmm\u2026 \u2018haciendo\u2019 es una palabra fuerte. Digamos que solo
+      estoy\u2026 explorando posibilidades.\""
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"Explorando posibilidades, dice. Mientras tanto, la gente en la aldea
+      cree en festivales que no existieron y Patchouli casi se quema viva en su propia
+      biblioteca. \xBFTe parece normal?\""
+  - character: {fileID: 11400000, guid: a3037e22198133d409aba5331d9844a6, type: 2}
+    text: "\"Oh, pero eso es lo fascinante, \xBFno? Las reglas de la realidad son
+      tan\u2026 aburridamente r\xEDgidas. A veces, hay que sacudirlas un poco para
+      ver qu\xE9 sucede.\""
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"As\xED que todo esto fue un capricho tuyo.\""
+  - character: {fileID: 11400000, guid: a3037e22198133d409aba5331d9844a6, type: 2}
+    text: "\"No exactamente. Quer\xEDa ver qu\xE9 pasar\xEDa si Gensokyo no estuviera
+      atado a un solo flujo de tiempo y l\xF3gica. Imagina, Reimu\u2026 \xBFy si
+      pudieras cambiar una decisi\xF3n y ver c\xF3mo afecta todo? \xBFY si ciertos
+      eventos pudieran repetirse de otra forma?\""
+  - character: {fileID: 11400000, guid: a3037e22198133d409aba5331d9844a6, type: 2}
+    text: "\"Oh, querida, \xBFqui\xE9n dijo que esto no es equilibrio? Solo estoy
+      empujando los l\xEDmites. Pero si tanto te molesta\u2026 \xBFqu\xE9 tal si
+      resolvemos esto a la manera tradicional?\""

@@ -49,6 +49,7 @@ public class BattleSystem : MonoBehaviour
         _enemyEntity = enemy.GetComponent<Entity>();
         
         _playerAnimator = player.GetComponent<Animator>();
+        _enemyAnimator = enemy.GetComponent<Animator>();
 
         Debug.Log($"Battle started! Player HP: {_playerEntity.currentHp}, Enemy HP: {_enemyEntity.currentHp}");
         combatUIAnimator.SetBool(IsOpen, true);
@@ -107,7 +108,9 @@ public class BattleSystem : MonoBehaviour
 
     private IEnumerator EnemyAttack()
     {
-        yield return new WaitForSeconds(1f);
+        _enemyAnimator.SetBool(IsAttacking, true);
+        yield return new WaitForSeconds(2f);
+        _enemyAnimator.SetBool(IsAttacking, false);
 
         _playerEntity.TakeDamage(_enemyEntity.damage);
 
@@ -141,6 +144,16 @@ public class BattleSystem : MonoBehaviour
         if (state == BattleState.Won)
         {
             FindFirstObjectByType<DialogueManager>().StartDialogue(_wonDialogue);
+            var unlockable = _enemy.GetComponent<Unlockable>();
+            if (unlockable != null)
+            {
+                _player.GetComponent<Player>().UnlockScenario(unlockable.scenario);
+                Debug.Log($"{unlockable.scenario} unlocked!");
+            }
+            else
+            {
+                Debug.LogWarning("No Unlockable component found on the enemy.");
+            }
             Debug.Log("Player won the battle!");
         }
         else

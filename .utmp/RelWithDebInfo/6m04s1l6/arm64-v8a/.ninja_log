@@ -1,10 +1,19 @@
 # ninja log v5
 77	1983	7644975590156973	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	4db7b7aaad13df47
+97	2162	7644975592013505	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	d6433d7fec3fe0b1
 14	2005	7644975590426878	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	152a369a9f25259
 59	2040	7644975590757002	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	8946685b74d3898a
-28	2109	7644975591438448	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f73a1ce66f7dddfb
 117	2131	7644975591685846	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	25e34afc98aee797
-97	2162	7644975592013505	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	d6433d7fec3fe0b1
+28	2109	7644975591438448	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f73a1ce66f7dddfb
+2476	2765	7644975597321648	C:/Users/edgar/UnityProjects/PortalAR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6m04s1l6/obj/arm64-v8a/libgame.so	1e5d814fe7d872b8
 42	2322	7644975593630986	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	36b6a7664f688c34
 1	2476	7644975595089750	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	6fbbbb6041fc417a
-2476	2765	7644975597321648	C:/Users/edgar/UnityProjects/PortalAR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6m04s1l6/obj/arm64-v8a/libgame.so	1e5d814fe7d872b8
+50	2312	7649254835311885	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	4db7b7aaad13df47
+78	2394	7649254836186409	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	25e34afc98aee797
+12	2432	7649254836378342	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f73a1ce66f7dddfb
+94	2674	7649254838896478	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	8946685b74d3898a
+27	2688	7649254839043912	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	152a369a9f25259
+131	2836	7649254840598529	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	d6433d7fec3fe0b1
+111	2914	7649254841373024	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	36b6a7664f688c34
+63	3134	7649254843556770	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	6fbbbb6041fc417a
+3134	3326	7649254845489576	C:/Users/edgar/UnityProjects/PortalAR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6m04s1l6/obj/arm64-v8a/libgame.so	1e5d814fe7d872b8

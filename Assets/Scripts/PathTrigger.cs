@@ -11,6 +11,8 @@ public class PathTrigger : MonoBehaviour
 
     public Scenario scenario;
 
+    public GameObject prefab;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponentInChildren<Player>() is null) return;
@@ -23,6 +25,17 @@ public class PathTrigger : MonoBehaviour
             if (startDialogue != null)
             {
                 dialogueManager.StartDialogue(startDialogue);
+
+                // Instanciar el objeto prefab
+                var obj = Instantiate(prefab, transform.position, Quaternion.identity);
+                obj.transform.parent = transform;
+                
+                // Eliminar el canvas
+                var canvas = GetComponentInChildren<Canvas>();
+                if (canvas != null)
+                    Destroy(canvas.gameObject);
+                
+                
                 dialogueManager.OnDialogueEnd += () =>
                 {
                     FindFirstObjectByType<BattleSystem>()

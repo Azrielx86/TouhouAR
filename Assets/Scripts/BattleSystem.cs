@@ -148,6 +148,7 @@ public class BattleSystem : MonoBehaviour
             if (unlockable != null)
             {
                 _player.GetComponent<Player>().UnlockScenario(unlockable.scenario);
+                Destroy(_enemy);
                 Debug.Log($"{unlockable.scenario} unlocked!");
             }
             else

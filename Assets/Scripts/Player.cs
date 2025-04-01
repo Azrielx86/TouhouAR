@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
@@ -5,11 +6,12 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Vuforia;
 
+[RequireComponent(typeof(Entity))]
 public class Player : MonoBehaviour
 {
     private static readonly int IsRunning = Animator.StringToHash("IsRunning");
 
-    private Entity _entity;
+    public Entity entity;
 
     [Header("Player objects")]
     public GameObject model;

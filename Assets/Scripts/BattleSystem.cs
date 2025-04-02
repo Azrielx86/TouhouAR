@@ -26,6 +26,12 @@ public class BattleSystem : MonoBehaviour
     public TextMeshProUGUI actionText;
     public Image spriteRenderer;
 
+    [FormerlySerializedAs("attackEffect")]
+    [Header("Effects")]
+    public GameObject playerAttackEffect;
+    public GameObject enemyAttackEffect;
+    public GameObject healEffect;
+
     private static readonly int IsOpen = Animator.StringToHash("IsOpen");
     private static readonly int IsAttacking = Animator.StringToHash("IsAttacking");
     private static readonly int IsHealing = Animator.StringToHash("IsHealing");
@@ -41,7 +47,7 @@ public class BattleSystem : MonoBehaviour
     public Dialogue.Dialogue lostDialogue;
 
     private bool _isTurnEventInProgress = false;
-    
+
     public BattleSystem SetupBattle(GameObject player, GameObject enemy)
     {
         state = BattleState.Start;
@@ -50,7 +56,7 @@ public class BattleSystem : MonoBehaviour
 
         _playerEntity = player.GetComponent<Entity>();
         _enemyEntity = enemy.GetComponent<Entity>();
-        
+
         _playerAnimator = player.GetComponent<Animator>();
         _enemyAnimator = enemy.GetComponent<Animator>();
 
@@ -66,7 +72,7 @@ public class BattleSystem : MonoBehaviour
         _wonDialogue = wonDialogue;
         return this;
     }
-    
+
     public void StartBattle()
     {
         state = BattleState.PlayerTurn;
@@ -93,9 +99,14 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(_playerAnimator.GetCurrentAnimatorStateInfo(0).length);
         _playerAnimator.SetBool(IsHealing, false);
         _isTurnEventInProgress = false;
-        
+
         _playerEntity.HealPercentage(0.15f);
         
+        var effect = Instantiate(healEffect, _player.transform.position, Quaternion.identity);
+        effect.transform.SetParent(_player.transform);
+        var particles = effect.GetComponent<ParticleSystem>();
+        Destroy(effect, particles.main.duration);
+
         state = BattleState.EnemyTurn;
         EnemyTurn();
         yield return null;
@@ -113,6 +124,12 @@ public class BattleSystem : MonoBehaviour
 
         // Calculate damage
         _enemyEntity.TakeDamage(_playerEntity.damage);
+        // Show attack effect
+        var effect = Instantiate(playerAttackEffect, _enemy.transform.position, Quaternion.identity);
+        effect.transform.SetParent(_enemy.transform);
+        var particles = effect.GetComponent<ParticleSystem>();
+        Destroy(effect, particles.main.duration);
+
 
         if (_enemyEntity.HasDied())
         {
@@ -135,6 +152,11 @@ public class BattleSystem : MonoBehaviour
         _isTurnEventInProgress = false;
 
         _playerEntity.TakeDamage(_enemyEntity.damage);
+        
+        var effect = Instantiate(enemyAttackEffect, _player.transform.position, Quaternion.identity);
+        effect.transform.SetParent(_player.transform);
+        var particles = effect.GetComponent<ParticleSystem>();
+        Destroy(effect, particles.main.duration);
 
         if (_playerEntity.HasDied())
         {
@@ -178,6 +200,7 @@ public class BattleSystem : MonoBehaviour
             {
                 Debug.LogWarning("No Unlockable component found on the enemy.");
             }
+
             Debug.Log("Player won the battle!");
         }
         else

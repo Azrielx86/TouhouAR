@@ -200,9 +200,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: marcador1
+  mTrackableName: phantom
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/MultiTarget.xml
+  mDataSetPath: Vuforia/Touhou.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -307,8 +307,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 39822659}
   mHiddenRoot: {fileID: 0}
-  mTargetName: marcador1
-  mDatasetName: Vuforia/MultiTarget.xml
+  mTargetName: phantom
+  mDatasetName: Vuforia/Touhou.xml
   mCastedBehaviour: {fileID: 39822659}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -902,9 +902,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: marcador3
+  mTrackableName: library
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/MultiTarget.xml
+  mDataSetPath: Vuforia/Touhou.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -944,8 +944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 403562658}
   mHiddenRoot: {fileID: 0}
-  mTargetName: marcador3
-  mDatasetName: Vuforia/MultiTarget.xml
+  mTargetName: library
+  mDatasetName: Vuforia/Touhou.xml
   mCastedBehaviour: {fileID: 403562658}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -1547,6 +1547,12 @@ MonoBehaviour:
   nameText: {fileID: 1875121010}
   actionText: {fileID: 1634363196}
   spriteRenderer: {fileID: 0}
+  playerAttackEffect: {fileID: 2944396702758532163, guid: e190bf97c041e58448af6b043116cba0,
+    type: 3}
+  enemyAttackEffect: {fileID: 6823302871133167919, guid: 3138a83bedbd6ad4481ba0b061da2eb6,
+    type: 3}
+  healEffect: {fileID: 7986504087968017091, guid: 12a56ee4630040c4eb17ae9707ed4cef,
+    type: 3}
   lostDialogue: {fileID: 11400000, guid: 4f2fed4b92fffda42aca0878ac4d0085, type: 2}
 --- !u!1 &790716591
 GameObject:
@@ -2532,9 +2538,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: portalturret
+  mTrackableName: touhou
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/MultiTarget.xml
+  mDataSetPath: Vuforia/Touhou.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -2575,8 +2581,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1359579397}
   mHiddenRoot: {fileID: 0}
-  mTargetName: portalturret
-  mDatasetName: Vuforia/MultiTarget.xml
+  mTargetName: touhou
+  mDatasetName: Vuforia/Touhou.xml
   mCastedBehaviour: {fileID: 1359579397}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -3946,9 +3952,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: marcador4
+  mTrackableName: village
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/MultiTarget.xml
+  mDataSetPath: Vuforia/Touhou.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -3988,8 +3994,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1783977750}
   mHiddenRoot: {fileID: 0}
-  mTargetName: marcador4
-  mDatasetName: Vuforia/MultiTarget.xml
+  mTargetName: village
+  mDatasetName: Vuforia/Touhou.xml
   mCastedBehaviour: {fileID: 1783977750}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="reimu" size="1.000000 1.000000" />
+    <ImageTarget name="touhou" size="1.000000 1.000000" />
+    <ImageTarget name="phantom" size="1.000000 1.000000" />
+    <ImageTarget name="village" size="1.000000 1.000000" />
+    <ImageTarget name="library" size="1.000000 1.000000" />
+    <ImageTarget name="toriigate" size="1.000000 1.000000" />
+  </Tracking>
+</QCARConfig>

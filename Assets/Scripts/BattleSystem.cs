@@ -94,8 +94,7 @@ public class BattleSystem : MonoBehaviour
         _playerAnimator.SetBool(IsHealing, false);
         _isTurnEventInProgress = false;
         
-        // Calculate healing
-        _playerEntity.HealPercentage(0.1f);
+        _playerEntity.HealPercentage(0.15f);
         
         state = BattleState.EnemyTurn;
         EnemyTurn();

@@ -174,8 +174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenario: 3
   recoverHp: 25
-  defenseIncrease: 0.3
-  damageIncrease: 0.25
+  defenseIncrease: 0.45
+  damageIncrease: 0.3
 --- !u!114 &466627544678346706
 MonoBehaviour:
   m_ObjectHideFlags: 0

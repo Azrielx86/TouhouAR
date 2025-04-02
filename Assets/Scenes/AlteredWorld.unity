@@ -4420,7 +4420,7 @@ MonoBehaviour:
   model: {fileID: 2018176884}
   animator: {fileID: 2018176885}
   speed: 0.75
-  scenarios: 0000000001000000
+  scenarios: 000000000100000003000000
 --- !u!136 &2018176887
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4489,7 +4489,7 @@ MonoBehaviour:
   maxHp: 100
   currentHp: 100
   defense: 0
-  maxDefense: 0
+  maxDefense: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

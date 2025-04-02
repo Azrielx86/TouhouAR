@@ -38,7 +38,8 @@ public class PathTrigger : MonoBehaviour
                 obj.transform.parent = transform;
                 
                 obj.transform.position = new Vector3(transform.position.x - 1.5f, transform.position.y, transform.position.z);
-                other.gameObject.transform.LookAt(obj.transform);
+                other.gameObject.transform.LookAt(new Vector3(obj.transform.position.x, other.gameObject.transform.position.y, obj.transform.position.z));
+                obj.transform.LookAt(new Vector3(other.gameObject.transform.position.x, obj.transform.position.y, other.gameObject.transform.position.z));
                 
                 // Eliminar el canvas
                 var canvas = GetComponentInChildren<Canvas>();

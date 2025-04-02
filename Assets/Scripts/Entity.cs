@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 using UnityEngine.Serialization;
 
 public class Entity : MonoBehaviour
 {
     public Character character;
+    [CanBeNull]
     public HealthBar healthBar;
     public int damage;
     public int maxHp;
@@ -13,6 +15,7 @@ public class Entity : MonoBehaviour
 
     private void Start()
     {
+        if (healthBar == null) return;
         healthBar.SetMaxHealth(maxHp);
         healthBar.SetHealth(currentHp);
     }
@@ -27,6 +30,7 @@ public class Entity : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         currentHp -= dmg - (int)(dmg * defense);
+        healthBar?.SetHealth(currentHp);
         defense = 0f;
     }
 
@@ -35,6 +39,15 @@ public class Entity : MonoBehaviour
         currentHp += amount;
         if (currentHp > maxHp)
             currentHp = maxHp;
+        healthBar?.SetHealth(currentHp);
+    }
+    
+    public void HealPercentage(float percentage)
+    {
+        currentHp += (int)(maxHp * percentage);
+        if (currentHp > maxHp)
+            currentHp = maxHp;
+        healthBar?.SetHealth(currentHp);
     }
 
     public bool HasDied() => currentHp <= 0;

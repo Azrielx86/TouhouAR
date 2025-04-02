@@ -28,6 +28,7 @@ public class BattleSystem : MonoBehaviour
 
     private static readonly int IsOpen = Animator.StringToHash("IsOpen");
     private static readonly int IsAttacking = Animator.StringToHash("IsAttacking");
+    private static readonly int IsHealing = Animator.StringToHash("IsHealing");
 
     private GameObject _player;
     private GameObject _enemy;
@@ -38,6 +39,8 @@ public class BattleSystem : MonoBehaviour
 
     private Dialogue.Dialogue _wonDialogue;
     public Dialogue.Dialogue lostDialogue;
+
+    private bool _isTurnEventInProgress = false;
     
     public BattleSystem SetupBattle(GameObject player, GameObject enemy)
     {
@@ -83,13 +86,31 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyAttack());
     }
 
+    private IEnumerator PlayerHeal()
+    {
+        _isTurnEventInProgress = true;
+        _playerAnimator.SetBool(IsHealing, true);
+        yield return new WaitForSeconds(_playerAnimator.GetCurrentAnimatorStateInfo(0).length);
+        _playerAnimator.SetBool(IsHealing, false);
+        _isTurnEventInProgress = false;
+        
+        // Calculate healing
+        _playerEntity.HealPercentage(0.1f);
+        
+        state = BattleState.EnemyTurn;
+        EnemyTurn();
+        yield return null;
+    }
+
     private IEnumerator PlayerAttack()
     {
         actionText.text = $"¡{_playerEntity.character.name} ataca!";
-        
+
+        _isTurnEventInProgress = true;
         _playerAnimator.SetBool(IsAttacking, true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(_playerAnimator.GetCurrentAnimatorStateInfo(0).length);
         _playerAnimator.SetBool(IsAttacking, false);
+        _isTurnEventInProgress = false;
 
         // Calculate damage
         _enemyEntity.TakeDamage(_playerEntity.damage);
@@ -108,9 +129,11 @@ public class BattleSystem : MonoBehaviour
 
     private IEnumerator EnemyAttack()
     {
+        _isTurnEventInProgress = true;
         _enemyAnimator.SetBool(IsAttacking, true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(_enemyAnimator.GetCurrentAnimatorStateInfo(0).length);
         _enemyAnimator.SetBool(IsAttacking, false);
+        _isTurnEventInProgress = false;
 
         _playerEntity.TakeDamage(_enemyEntity.damage);
 
@@ -128,14 +151,14 @@ public class BattleSystem : MonoBehaviour
 
     public void OnAttackButton()
     {
-        if (state != BattleState.PlayerTurn) return;
+        if (state != BattleState.PlayerTurn || _isTurnEventInProgress) return;
         StartCoroutine(PlayerAttack());
     }
 
     public void OnDefenseButton()
     {
-        if (state != BattleState.PlayerTurn) return;
-        // StartCoroutine(PlayerAttack());
+        if (state != BattleState.PlayerTurn || _isTurnEventInProgress) return;
+        StartCoroutine(PlayerHeal());
     }
 
     private void EndBattle()

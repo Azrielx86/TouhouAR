@@ -64,11 +64,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 30eb3ca1093fb0e46b216041eeefd5c9, type: 2}
-  damage: 5
+  healthBar: {fileID: 0}
+  damage: 10
   maxHp: 50
   currentHp: 50
-  defense: 0
-  maxDefense: 0
+  defense: 0.1
+  maxDefense: 0.1
 --- !u!95 &3108641985453260104
 Animator:
   serializedVersion: 7
@@ -104,6 +105,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenario: 2
+  recoverHp: 25
+  defenseIncrease: 0.1
+  damageIncrease: 0.1
 --- !u!1001 &3273026722439858618
 PrefabInstance:
   m_ObjectHideFlags: 0

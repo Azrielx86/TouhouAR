@@ -12,6 +12,8 @@ public class PathTrigger : MonoBehaviour
     public Scenario scenario;
 
     public GameObject prefab;
+    
+    public HealthBar enemyHealthBar;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,6 +30,10 @@ public class PathTrigger : MonoBehaviour
 
                 // Instanciar el objeto prefab
                 var obj = Instantiate(prefab, transform.position, Quaternion.identity);
+                var objEntity = obj.GetComponent<Entity>();
+                objEntity.healthBar = enemyHealthBar;
+                enemyHealthBar.SetHealth(objEntity.currentHp);
+                enemyHealthBar.SetMaxHealth(objEntity.maxHp);
                 obj.transform.parent = transform;
                 
                 // Eliminar el canvas

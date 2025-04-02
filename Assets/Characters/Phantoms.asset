@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Phantoms
   m_EditorClassIdentifier: 
   charactrerName: Fantasmas
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: fe39b2643a5aac743b93c58b4cbc13ee, type: 3}

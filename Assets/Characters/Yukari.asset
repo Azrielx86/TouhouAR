@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Yukari
   m_EditorClassIdentifier: 
   charactrerName: Yukari Yakumo
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 81478616c0cb69e4993c324cd6d6e164, type: 3}

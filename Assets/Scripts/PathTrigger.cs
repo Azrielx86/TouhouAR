@@ -34,7 +34,11 @@ public class PathTrigger : MonoBehaviour
                 objEntity.healthBar = enemyHealthBar;
                 enemyHealthBar.SetHealth(objEntity.currentHp);
                 enemyHealthBar.SetMaxHealth(objEntity.maxHp);
+                
                 obj.transform.parent = transform;
+                
+                obj.transform.position = new Vector3(transform.position.x - 1.5f, transform.position.y, transform.position.z);
+                other.gameObject.transform.LookAt(obj.transform);
                 
                 // Eliminar el canvas
                 var canvas = GetComponentInChildren<Canvas>();

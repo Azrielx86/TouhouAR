@@ -24,9 +24,9 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
     text: "\"Tsk\u2026 Solo hay una persona que har\xEDa algo as\xED sin avisar.\""
   - character: {fileID: 11400000, guid: 1105d1bca174b4e45a037c21bccf64cc, type: 2}
-    text: Patchouli asiente levemente, confirmando lo que Reimu sospecha...
-  - character: {fileID: 11400000, guid: 1105d1bca174b4e45a037c21bccf64cc, type: 2}
-    text: "Yukari Yakumo est\xE1 detr\xE1s de esto."
+    text: Sakuya asiente levemente, confirmando lo que Reimu sospecha...
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"Yukari Yakumo est\xE1 detr\xE1s de esto\"."
   - character: {fileID: 11400000, guid: 36578215163829045a1cfea343f92ce9, type: 2}
     text: "\"Si vas a detener esto, m\xE1s te vale estar preparada. No es solo la
       realidad lo que est\xE1 cambiando\u2026 sino tambi\xE9n c\xF3mo interactuamos

@@ -17,7 +17,7 @@ public class PathTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponentInChildren<Player>() is null) return;
+        if (other.gameObject.GetComponent<Player>() is null) return;
 
         Debug.Log("Player collided with the trigger.");
 

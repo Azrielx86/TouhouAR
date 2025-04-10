@@ -2,6 +2,7 @@ using System.Collections;
 using Dialogue;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -29,12 +30,14 @@ public class BattleSystem : MonoBehaviour
     [FormerlySerializedAs("attackEffect")]
     [Header("Effects")]
     public GameObject playerAttackEffect;
+
     public GameObject enemyAttackEffect;
     public GameObject healEffect;
 
     private static readonly int IsOpen = Animator.StringToHash("IsOpen");
     private static readonly int IsAttacking = Animator.StringToHash("IsAttacking");
     private static readonly int IsHealing = Animator.StringToHash("IsHealing");
+    private static readonly int IsDead = Animator.StringToHash("IsDead");
 
     private GameObject _player;
     private GameObject _enemy;
@@ -101,7 +104,7 @@ public class BattleSystem : MonoBehaviour
         _isTurnEventInProgress = false;
 
         _playerEntity.HealPercentage(0.15f);
-        
+
         var effect = Instantiate(healEffect, _player.transform.position, Quaternion.identity);
         effect.transform.SetParent(_player.transform);
         var particles = effect.GetComponent<ParticleSystem>();
@@ -152,7 +155,7 @@ public class BattleSystem : MonoBehaviour
         _isTurnEventInProgress = false;
 
         _playerEntity.TakeDamage(_enemyEntity.damage);
-        
+
         var effect = Instantiate(enemyAttackEffect, _player.transform.position, Quaternion.identity);
         effect.transform.SetParent(_player.transform);
         var particles = effect.GetComponent<ParticleSystem>();
@@ -161,6 +164,7 @@ public class BattleSystem : MonoBehaviour
         if (_playerEntity.HasDied())
         {
             state = BattleState.Lost;
+            _playerAnimator.SetBool(IsDead, true);
             EndBattle();
             yield break;
         }
@@ -189,11 +193,10 @@ public class BattleSystem : MonoBehaviour
         {
             FindFirstObjectByType<DialogueManager>().StartDialogue(_wonDialogue);
             var unlockable = _enemy.GetComponent<Unlockable>();
-            if (unlockable != null)
+            if (unlockable is not null)
             {
                 _player.GetComponent<Player>().UnlockScenario(unlockable.scenario);
                 _playerEntity.ApplyImprovements(unlockable);
-                Destroy(_enemy);
                 Debug.Log($"{unlockable.scenario} unlocked!");
             }
             else
@@ -201,11 +204,15 @@ public class BattleSystem : MonoBehaviour
                 Debug.LogWarning("No Unlockable component found on the enemy.");
             }
 
+            Destroy(_enemy);
+
             Debug.Log("Player won the battle!");
         }
         else
         {
-            FindFirstObjectByType<DialogueManager>().StartDialogue(lostDialogue);
+            var dialogueManager = FindFirstObjectByType<DialogueManager>();
+            dialogueManager.OnDialogueEnd += () => { SceneManager.LoadScene(SceneManager.GetActiveScene().name); };
+            dialogueManager.StartDialogue(lostDialogue);
             Debug.Log("Player lost the battle!");
         }
     }

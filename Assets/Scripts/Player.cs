@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Dialogue;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -17,6 +18,8 @@ public class Player : MonoBehaviour
     public GameObject model;
 
     public Animator animator;
+    
+    public Dialogue.Dialogue maybeNotDialogue;
 
     [Header("Movement")]
     public float speed = 1.0f;
@@ -50,6 +53,10 @@ public class Player : MonoBehaviour
 
         if (target is null || !scenarios.Contains(target.GetComponent<PathTrigger>().scenario))
         {
+            var dm = FindFirstObjectByType<DialogueManager>();
+            
+            dm.StartDialogue(maybeNotDialogue);
+            
             animator.SetBool(IsRunning, false);
             _isMoving = false;
             yield break;

@@ -105,6 +105,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1854665199163171673}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 80da16ec6b4050f4a8651b12e8ff29a0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -76175175953704153}
   m_SourcePrefab: {fileID: 100100000, guid: 80da16ec6b4050f4a8651b12e8ff29a0, type: 3}
 --- !u!1 &2304849520352709977 stripped
 GameObject:
@@ -145,3 +149,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 0}
   animator: {fileID: 0}
+--- !u!114 &-76175175953704153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2304849520352709977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d9952b2a68f744895f5be6b0c61963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenario: 4
+  recoverHp: 0
+  defenseIncrease: 0
+  damageIncrease: 0

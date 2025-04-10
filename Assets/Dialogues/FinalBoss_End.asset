@@ -29,3 +29,15 @@ MonoBehaviour:
     text: "\"Bueno, \xBFno es curioso? Con este peque\xF1o \u2018experimento\u2019,
       ahora sabes que ciertos eventos pueden cambiar\u2026 \xBFqui\xE9n dice que
       esto no podr\xEDa repetirse?\""
+  - character: {fileID: 11400000, guid: 1105d1bca174b4e45a037c21bccf64cc, type: 2}
+    text: ...
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"Uf\u2026 Por fin se termin\xF3.\""
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"As\xED que Yukari estaba jugando con la realidad otra vez.\""
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: ...
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"Bueno, si el mundo sigue existiendo, supongo que lo arregl\xE9.\""
+  - character: {fileID: 11400000, guid: 4d3cf358518918c46b0f0a73d7dbe66f, type: 2}
+    text: "\"Por ahora\u2026\""
